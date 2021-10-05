@@ -6,7 +6,7 @@ fetchMock.enableMocks();
 describe("api fetched or not",function()
 {
     
-    it("failedcase",async function ():Promise<any> {
+    it("failedcase",function () {
         
         fetchMock.mockReject(() =>mocking().then(() => 
         {
@@ -16,7 +16,7 @@ describe("api fetched or not",function()
         } ))    
         
     })
-    it("success case",async function (): Promise<any>{
+    it("success case",function (){
         
         fetchMock.mockResponse(() => mocking().then(() => {
             expect.assertions(1)
